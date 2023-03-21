@@ -6,10 +6,10 @@ const Profile = () => {
   return (
     <div>
       <h1>Profile</h1>
-{console.log(user.name)}
-      <p>{user.name}</p>
 
-      <p>{user.email}</p>
+      <p>{user?.name}</p>
+
+      <p>{user?.email}</p>
     </div>
   );
 };

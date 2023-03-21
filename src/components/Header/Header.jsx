@@ -19,7 +19,10 @@ const Header = () => {
 
       <div>
         {user ? (
+            <>
           <span onClick={onLogout}>Logout</span>
+          <span><Link to="/profile" >Profile</Link> </span>
+          </>
         ) : (
           <>
             <span>
