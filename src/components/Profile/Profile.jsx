@@ -5,11 +5,13 @@ const Profile = () => {
 
   return (
     <div>
-      <h1>Profile</h1>
+      <h1>Profile{console.log(user)}</h1>
 
-      <p>{user?.name}</p>
+      <p>{user?.user.name}</p>
 
-      <p>{user?.email}</p>
+      <p>{user?.user.email}</p>
+
+      <p>{user?.user.role}</p>
     </div>
   );
 };
