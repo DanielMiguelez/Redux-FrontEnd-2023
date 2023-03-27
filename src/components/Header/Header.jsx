@@ -18,6 +18,7 @@ const Header = () => {
       <span>header</span>
 
       <div>
+      <span><Link to="/" >Home</Link> </span>
         {user ? (
             <>
           <span onClick={onLogout}>Logout</span>
