@@ -1,9 +1,28 @@
-import React from 'react'
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Post = () => {
-  return (
-    <div>Post</div>
-  )
-}
+  const { posts, isLoading } = useSelector((state) => state.posts);
 
-export default Post
+  if (isLoading) {
+    return <h1>Cargando...</h1>;
+  }
+  return (
+    <div>
+      Post
+      {posts.map((post) => {
+        return (
+          <div key={post.id}>
+            <Link to={"/post/" + post.id}>
+              <p>Title: {post.title}</p>
+              <p> Date: {post.createdAt.substring(0, 10)}</p>
+            </Link>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Post;
