@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getAll } from "../../features/posts/postsSlice";
+import { getAll, reset } from "../../features/posts/postsSlice";
 import Post from "./Post/Post";
 
 const Posts = () => {
@@ -8,6 +8,7 @@ const Posts = () => {
 
   useEffect(() => {
     dispatch(getAll());
+    dispatch(reset())
   }, []);
 
   return (

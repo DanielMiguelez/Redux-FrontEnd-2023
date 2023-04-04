@@ -10,17 +10,15 @@ const Post = () => {
   }
   return (
     <div>
-      Post
-      {posts.map((post) => {
-        return (
-          <div key={post.id}>
-            <Link to={"/post/" + post.id}>
-              <p>Title: {post.title}</p>
-              <p> Date: {post.createdAt.substring(0, 10)}</p>
-            </Link>
-          </div>
-        );
-      })}
+      Posts de los usuarios
+      {posts?.post?.map((post) => (
+        <div key={post?.id}>
+          <Link to={"/post/" + post.id}>
+            <p>Title: {post.title}</p>
+            <p>content: {post.content}</p>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };
