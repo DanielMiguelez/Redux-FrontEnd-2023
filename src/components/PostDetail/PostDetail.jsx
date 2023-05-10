@@ -14,10 +14,9 @@ const PostDetail = () => {
 
   return (
     <div >PostDetail
-      <p>{post.User.name}</p>
+      
       <p>{post.content}</p>
       <p>{post.title}</p>
-      {console.log(post.User.name)}
     </div>
   )
 }
